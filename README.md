@@ -36,7 +36,7 @@ InstaNews é uma aplicação web que exibe notícias no estilo de feed do Instag
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/instanews.git
+   git clone https://github.com/TMendesO/instaNews.git
    cd instanews
    ```
 
