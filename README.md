@@ -126,9 +126,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 - **Autor:** Thiago Mendes
 - **Email:** thiago.mendes90@yahoo.com.br
-- **LinkedIn:** [Seu LinkedIn](https://www.linkedin.com/in/thiago-mendes-dev/)
-
-```
-
-
-```
+- **LinkedIn:** [Meu LinkedIn](https://www.linkedin.com/in/thiago-mendes-dev/)
