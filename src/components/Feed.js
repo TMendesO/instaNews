@@ -5,7 +5,7 @@ import "../styles/Feed.scss";
 
 const Feed = () => {
   const [articles, setArticles] = useState([]);
-  const [source, setSource] = useState("all"); // Fonte de notícias padrão (todas as fontes combinadas)
+  const [source, setSource] = useState("all");
 
   useEffect(() => {
     const loadNews = async () => {
@@ -17,8 +17,14 @@ const Feed = () => {
         setArticles(filteredNews);
       }
     };
-
     loadNews();
+
+    const intervalid = setInterval(() => {
+      console.log("Atualizando noticias...");
+      loadNews();
+    }, 1800000);
+
+    return () => clearInterval(intervalid);
   }, [source]);
 
   return (
@@ -26,8 +32,11 @@ const Feed = () => {
       <div className="feed__controls">
         <button onClick={() => setSource("all")}>Todas as Fontes</button>
         <button onClick={() => setSource("nyt")}>NY Times</button>
-        <button onClick={() => setSource("newsapi")}>Google News BR</button>
+        <button onClick={() => setSource("newsapi")}>News BR</button>
         <button onClick={() => setSource("gnews")}>Google News BR</button>
+        <button onClick={() => setSource("openweathermap")}>Climatempo</button>
+        <button onClick={() => setSource("awesomeapi")}>Cotações</button>
+        <button onClick={() => setSource("jokes")}>Piadas</button>
       </div>
       {articles.map((article, index) => (
         <Post key={index} article={article} />
